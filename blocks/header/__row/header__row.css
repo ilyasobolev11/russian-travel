@@ -1,0 +1,20 @@
+.header__row {
+  list-style: none;
+  margin: 0;
+  padding: 1.125rem 0 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-min-content 1.125rem -webkit-min-content;
+  -ms-grid-columns: min-content 1.125rem min-content;
+  grid-template-columns: repeat(2, -webkit-min-content);
+  grid-template-columns: repeat(2, min-content);
+  -ms-flex-line-pack: start;
+  align-content: start;
+  gap: 0 1.125rem;
+}
+
+@media screen and (max-width: 450px) {
+  .header__row {
+    padding-top: 0.875rem;
+  }
+}

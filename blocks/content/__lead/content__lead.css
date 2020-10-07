@@ -1,0 +1,9 @@
+.content__lead {
+  grid-column: 2 / 3;
+}
+
+@media screen and (max-width: 768px) {
+  .content__lead {
+    grid-column: 1 / 4;
+  }
+}

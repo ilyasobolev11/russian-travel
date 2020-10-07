@@ -1,0 +1,29 @@
+.content {
+  display: grid;
+  grid-template-columns: 6.25rem 1fr 6.25rem;
+  align-content: start;
+  row-gap: 5.75rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    grid-template-columns: 3rem 1fr 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1.5rem 1fr 1.5rem;
+    row-gap: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content {
+    grid-template-columns: 1rem 1fr 1rem;
+    row-gap: 4rem;
+  }
+}

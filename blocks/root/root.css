@@ -1,0 +1,30 @@
+.root {
+  max-width: 1280px;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 1.75rem 0 1.5rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  align-content: start;
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    grid-template-columns: 1.5rem 1fr 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .root {
+    padding-top: 1rem;
+    grid-template-columns: 1rem 1fr 1rem;
+  }
+}
