@@ -2,6 +2,7 @@
 @import url(../blocks/root/root.css);
 @import url(../blocks/root/__header/root__header.css);
 @import url(../blocks/root/__content/root__content.css);
+@import url(../blocks/link-hover/link-hover.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__row/header__row.css);
@@ -10,6 +11,8 @@
 @import url(../blocks/content/content.css);
 @import url(../blocks/content/__lead/content__lead.css);
 @import url(../blocks/content/__intro/content__intro.css);
+@import url(../blocks/content/__photo-grid/content__photo-grid.css);
+@import url(../blocks/content/__places/content__places.css);
 @import url(../blocks/lead/lead.css);
 @import url(../blocks/lead/__title/lead__title.css);
 @import url(../blocks/lead/__subtitle/lead__subtitle.css);
@@ -21,10 +24,22 @@
 @import url(../blocks/intro/__list/intro__list.css);
 @import url(../blocks/intro/__list-item/intro__list-item.css);
 @import url(../blocks/intro/__span-accent/intro__span-accent.css);
+@import url(../blocks/photo-grid/photo-grid.css);
+@import url(../blocks/photo-grid/__item/photo-grid__item.css);
+@import url(../blocks/places/places.css);
+@import url(../blocks/place/place.css);
+@import url(../blocks/place/__title/place__title.css);
+@import url(../blocks/place/__website/place__website.css);
+@import url(../blocks/place/__url-heading/place__url-heading.css);
+@import url(../blocks/place/__link/place__link.css);
+@import url(../blocks/place/__image/place__image.css);
+@import url(../blocks/place/__main-text/place__main-text.css);
+@import url(../blocks/place/__paragraph/place__paragraph.css);
 
-/*куда поместятся при сборке проекта?*/
-html {
-  font-size: 16px;
+/*куда поместятся при сборке проекта? в видео видел, что на верх все ставится перед импортами*/
+/*супер непрправильно, надо выносить в классы, можно сделать root__inner, но что делать с margin?*/
+html { /*простительно, по другому не извернуться*/
+  font-size: 16px;/*надо было использовать 10px*/
 }
 
 * {

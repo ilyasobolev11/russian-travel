@@ -1,0 +1,9 @@
+.content__photo-grid {
+  grid-column: 1 / 4;
+}
+
+@media screen and (max-width: 1024px) {
+  .content__photo-grid {
+    grid-column: 2 / 3;
+  }
+}
