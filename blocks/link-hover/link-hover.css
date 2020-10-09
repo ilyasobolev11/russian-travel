@@ -2,6 +2,8 @@
   transition: opacity .7s;
 }
 
-.link-hover:hover {
+.link-hover:hover,
+.link-hover:focus {
   opacity: .8;
+  cursor: pointer;
 }
