@@ -9,7 +9,7 @@
   <title>Путешествия по России</title>
   <link rel="stylesheet" href="./pages/index.css"><!--normalize выкинул, т.к. все (вроде как все) используемые свойства описал в блоках-->
 </head>
-<body>
+<body class="body">
   <div class="root">
     <header class="header root__header">
       <img class="header__logo" src="./images/header-logo.svg" alt="логотип-сайта">
@@ -24,11 +24,13 @@
     </header>
 
     <main class="content root__content">
-      <section class="lead content__lead">
+      <section class="lead content__lead"><!--если бы здесь не было медиа запросов, или почти у всех секций было бы одинаковое поведение при уменьшении доступного пространства, то я бы организовал все с помощью общего класса с модификаторами для размеров. Но в данном случае, реализовать это очень сложно, т.к. в некоторых секциях пришлось установить брейк поинты отличные от других (чтобы контент внутри выглядел аккуратно). Или я что-то неправильно понял?-->
         <h1 class="lead__title">Путешествия по России</h1>
         <p class="lead__subtitle">Настоящая страна не в выпусках новостей, а здесь.</p>
-        <img class="lead__image" src="./images/lead-polka.jpg" alt="картинка - путешествие по России на поезде">
-        <p class="lead__caption">ваша полка — верхняя</p>
+        <figure class="lead__image-container"><!--figure и figcaption использовал изначально, но потом передумал, так как 1) возможно это бы расценили за лишнюю обертку (но видимо только div-ы таковыми можно считать). 2) для figure пришлось бы создавать дополнительный класс (придумывать название), чтобы убрать margin по умолчанию.-->
+          <img class="lead__image" src="./images/lead-polka.jpg" alt="картинка - путешествие по России на поезде">
+          <figcaption  class="lead__caption">ваша полка — верхняя</figcaption >
+        </figure>
       </section>
 
       <section class="intro content__intro">
@@ -66,8 +68,8 @@
         <article class="place">
           <h3 class="place__title">Куршская коса</h3>
           <div class="place__website">
-            <p class="place__url-heading">URL</p>
-            <a href="http://park-kosa.ru" class="place__link link-hover">park-kosa.ru</a>
+            <p class="place__url-heading">url</p>
+            <a href="http://park-kosa.ru" class="place__link link-hover" target="_blank">park-kosa.ru</a>
           </div>
           <img  class="place__image" src="./images/place-kosa.jpg" alt="Куршская коса">
           <div class="place__main-text">
@@ -83,8 +85,8 @@
         <article class="place">
           <h3 class="place__title">Кольский</h3>
           <div class="place__website">
-            <p class="place__url-heading">URL</p>
-            <a href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy" class="place__link link-hover">National Geographic</a>
+            <p class="place__url-heading">url</p>
+            <a href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy" class="place__link link-hover" target="_blank">National Geographic</a>
           </div>
           <img class="place__image" src="./images/place-kolsky.jpg" alt="Кольский полуостров">
           <div class="place__main-text">
@@ -101,8 +103,8 @@
         <article class="place">
           <h3 class="place__title">Алтай</h3>
           <div class="place__website">
-            <p class="place__url-heading">URL</p>
-            <a href="https://www.facebook.com/vera.bashmakova/posts/10156011613718822" class="place__link link-hover">Facebook</a>
+            <p class="place__url-heading">url</p>
+            <a href="https://www.facebook.com/vera.bashmakova/posts/10156011613718822" class="place__link link-hover" target="_blank">Facebook</a>
           </div>
           <img class="place__image" src="./images/place-altai.jpg" alt="Алтай">
           <div class="place__main-text">
@@ -118,8 +120,8 @@
         <article class="place">
           <h3 class="place__title">Зимний Байкал</h3>
           <div class="place__website">
-            <p class="place__url-heading">URL</p>
-            <a href="https://vk.com/baikalmile" class="place__link link-hover">https://vk.com/baikalmile</a>
+            <p class="place__url-heading">url</p>
+            <a href="https://vk.com/baikalmile" class="place__link link-hover" target="_blank">https://vk.com/baikalmile</a>
           </div>
           <img class="place__image" src="./images/place-winter-baikal.jpg" alt="зимний Байкал">
           <div class="place__main-text">
@@ -135,8 +137,8 @@
         <article class="place">
           <h3 class="place__title">Карелия</h3>
           <div class="place__website">
-            <p class="place__url-heading">URL</p>
-            <a href="http://vodlozero.ru" class="place__link link-hover">http://vodlozero.ru/</a>
+            <p class="place__url-heading">url</p>
+            <a href="http://vodlozero.ru" class="place__link link-hover" target="_blank">http://vodlozero.ru/</a>
           </div>
           <img class="place__image" src="./images/place-karelia.jpg" alt="Карелия">
           <div class="place__main-text">
@@ -148,7 +150,7 @@
       </section>
 
       <section class="cover content__cover">
-        <a href="https://stampsy.com/na-elektrichkakh-do-baikala" class="cover__link">
+        <a href="https://stampsy.com/na-elektrichkakh-do-baikala" class="cover__link" target="_blank">
           <h2 class="cover__title">До Байкала «на&nbsp;собаках»</h2>
           <p class="cover__subtitle">По мотивам учебной темы о Транссибе и iframes — путешествие от столицы до Байкала на электричках.</p>
         </a>
