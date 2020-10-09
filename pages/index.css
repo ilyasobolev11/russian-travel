@@ -1,7 +1,9 @@
+/*normalize выкинул, т.к. все (вроде как все) используемые свойства описал или в блоках или под импортами*/
 @import url(../vendor/fonts/fonts.css);
 @import url(../blocks/root/root.css);
 @import url(../blocks/root/__header/root__header.css);
 @import url(../blocks/root/__content/root__content.css);
+@import url(../blocks/root/__footer/root__footer.css);
 @import url(../blocks/link-hover/link-hover.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
@@ -36,21 +38,21 @@
 @import url(../blocks/place/__image/place__image.css);
 @import url(../blocks/place/__main-text/place__main-text.css);
 @import url(../blocks/place/__paragraph/place__paragraph.css);
-@import url(../blocks/cover/__link-layout/cover__link-layout.css);
+@import url(../blocks/cover/__link/cover__link.css);
 @import url(../blocks/cover/__title/cover__title.css);
 @import url(../blocks/cover/__subtitle/cover__subtitle.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__links/footer__links.css);
+@import url(../blocks/footer/__link/footer__link.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
 
+/*ниже не те дроиды, которых вы ищите*/
 /*куда поместятся при сборке проекта? в видео видел, что на верх все ставится перед импортами*/
-/*супер непрправильно, надо выносить в классы, можно сделать root__inner, но что делать с margin?*/
-html { /*простительно, по другому не извернуться*/
+html {
   font-size: 16px;/*надо было использовать 10px*/
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
+/*супер непрправильно, надо выносить в классы, можно сделать root / root__inner для фона, но что делать с margin, его же не должно быть в блоке, а выше только html?*/
 body {
   margin: 0;
   background-color: #2A2C2F;

@@ -1,5 +1,4 @@
 .header {
-  grid-column: 2 / 3;
   /*width: calc(100% - 6rem); можно как 90%*/
   display: -webkit-box;
   display: -ms-flexbox;

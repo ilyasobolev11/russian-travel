@@ -1,0 +1,16 @@
+.footer__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1.125rem;
+  align-content: center;
+}
+
+@media screen and (max-width: 740px) {
+  .footer__links {
+    grid-auto-flow: row;
+    row-gap: 2rem;
+  }
+}
